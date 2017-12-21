@@ -68,7 +68,7 @@ sed -i -e"s|^.*forwarder_log_file:.*$|forwarder_log_file: $DD_LOG_DIR/forwarder.
 sed -i -e"s|^.*dogstatsd_log_file:.*$|dogstatsd_log_file: $DD_LOG_DIR/dogstatsd.log|" $DD_AGENT_CONF
 
 # Fix log_level
-#sed -i -e"s|^.*log_level:.*$|log_level: DEBUG|" $DD_AGENT_CONF
+sed -i -e"s|^.*log_level:.*$|log_level: DEBUG|" $DD_AGENT_CONF
 
 # Use modified aggregator.py
 #cp $BUILDPACK_DIR/extra/aggregator.py $DD_AGENT_ROOT/opt/datadog-agent/agent/
